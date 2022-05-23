@@ -1,13 +1,20 @@
 #!/usr/bin/python3
-
+# nu11secur1ty 2022
 from passlib.hash import bcrypt
 from libs import pingo
 import sys
+from colorama import init, Fore, Back, Style
+init(convert=True)
+import requests
 
-print("\n*************************************************")
-print("Bcrypt-forcer - Password cracker tools for bcrypt hash")
-print("*************************************************")
+print(Fore.BLUE + "\n******************************************************")
+print("Bcrypt-forcer - Password cracker tool for bcrypt hash")
+print("******************************************************")
+print(Style.RESET_ALL)
+
+print(Fore.YELLOW)
 options = input('\nYou want to crack? y/n: ')
+print(Style.RESET_ALL)
 
 if (options == "n"):
     sys.exit()
@@ -33,7 +40,10 @@ for (index, word) in enumerate(words):
         break
 
 if (found == 1):
-    print("\n\nPassword found!")
-    print("Results:", correct_word)
+    print(Fore.YELLOW+"\n\nPassword found!")
+    print(Style.RESET_ALL)
+    print(Fore.GREEN+"Results:", correct_word)
+    print(Style.RESET_ALL)
 else:
-    print("\n\nUnfortunately, password not found.")
+    print(Fore.RED+"\n\nUnfortunately, password not found.")
+    print(Style.RESET_ALL)
