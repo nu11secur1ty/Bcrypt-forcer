@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-#from colored import fg
-
-#color = fg('#008000')
+#!/usr/bin/python3
 
 def pingo(iteration,
           total,
