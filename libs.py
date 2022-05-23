@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+from colorama import init, Fore, Back, Style
+init(convert=True)
+import requests
 
 def pingo(iteration,
           total,
