@@ -5,7 +5,7 @@ from libs import pingo
 import sys
 
 print("\n*************************************************")
-print("Debcrypt - Password cracker tools for bcrypt hash")
+print("Bcrypt-forcer - Password cracker tools for bcrypt hash")
 print("*************************************************")
 options = input('\nYou want to crack? y/n: ')
 
