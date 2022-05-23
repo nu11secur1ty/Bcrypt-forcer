@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# nu11secur1ty 2022
 from colorama import init, Fore, Back, Style
 init(convert=True)
 import requests
