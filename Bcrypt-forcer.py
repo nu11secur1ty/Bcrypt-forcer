@@ -47,7 +47,7 @@ for (index, word) in enumerate(words):
         break
 
 if (found == 1):
-    print(Fore.YELLOW+ ' ' "Password found!")
+    print(Fore.YELLOW+time_attack+ ' ' "Password found!")
     print(Style.RESET_ALL)
     print(Fore.GREEN+time_attack+ ' ' "Results:", correct_word)
     print(Style.RESET_ALL)
