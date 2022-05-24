@@ -8,10 +8,9 @@ init(convert=True)
 import requests
 from datetime import datetime
 
-
+## %d/%m/%Y 
 now = datetime.now()
-time_attack = now.strftime("[%d/%m/%Y %H:%M:%S]")
-#print("date and time =", time_attack)
+time_attack = now.strftime("[%H:%M:%S][info]")
 
 
 print(Fore.BLUE + "\n******************************************************")
