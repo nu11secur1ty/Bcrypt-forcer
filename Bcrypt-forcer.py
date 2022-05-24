@@ -6,6 +6,13 @@ import sys
 from colorama import init, Fore, Back, Style
 init(convert=True)
 import requests
+from datetime import datetime
+
+
+now = datetime.now()
+time_attack = now.strftime("%d/%m/%Y %H:%M:%S")
+#print("date and time =", time_attack)
+
 
 print(Fore.BLUE + "\n******************************************************")
 print("Bcrypt-forcer - Password cracker tool for bcrypt hash")
@@ -13,7 +20,7 @@ print("******************************************************")
 print(Style.RESET_ALL)
 
 print(Fore.YELLOW)
-options = input('\nYou want to crack? y/n: ')
+options = input(time_attack+ ' ' "You want to crack? y/n:")
 print(Style.RESET_ALL)
 
 if (options == "n"):
@@ -26,7 +33,7 @@ text_file = open("password-list/testingpass.txt", "r", encoding="cp437")
 
 words = text_file.read().splitlines()
 
-hash = input('Hash to crack: ')
+hash = input(time_attack+ ' ' "Hash to crack: ")
 length = len(words)
 
 correct_word = ""
@@ -40,10 +47,10 @@ for (index, word) in enumerate(words):
         break
 
 if (found == 1):
-    print(Fore.YELLOW+"\n\nPassword found!")
+    print(Fore.YELLOW+ ' ' "Password found!")
     print(Style.RESET_ALL)
-    print(Fore.GREEN+"Results:", correct_word)
+    print(Fore.GREEN+time_attack+ ' ' "Results:", correct_word)
     print(Style.RESET_ALL)
 else:
-    print(Fore.RED+"\n\nUnfortunately, password not found.")
+    print(Fore.RED+time_attack+ ' ' "Unfortunately, password not found.")
     print(Style.RESET_ALL)
