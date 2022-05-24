@@ -10,7 +10,7 @@ from datetime import datetime
 
 
 now = datetime.now()
-time_attack = now.strftime("%d/%m/%Y %H:%M:%S")
+time_attack = now.strftime("[%d/%m/%Y %H:%M:%S]")
 #print("date and time =", time_attack)
 
 
@@ -47,10 +47,10 @@ for (index, word) in enumerate(words):
         break
 
 if (found == 1):
-    print(Fore.YELLOW+time_attack+ ' ' "Password found!")
+    print(Fore.YELLOW+time_attack+ ' ' "\n\nPassword found!")
     print(Style.RESET_ALL)
     print(Fore.GREEN+time_attack+ ' ' "Results:", correct_word)
     print(Style.RESET_ALL)
 else:
-    print(Fore.RED+time_attack+ ' ' "Unfortunately, password not found.")
+    print(Fore.RED+time_attack+ ' ' "\n\nUnfortunately, password not found.")
     print(Style.RESET_ALL)
